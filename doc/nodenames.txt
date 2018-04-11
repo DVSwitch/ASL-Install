@@ -1,0 +1,24 @@
+Scott KB2EAR maintains a repository of custom node IDs taht can be downloaded to a node and when you connect to or get a connect from one of these nodes, you get a custom message.
+These are the notes from Scott slightly edited.
+
+Add this line to your crontab
+
+00 00,12 * * * /usr/bin/rsync -av rsync://reflector.kb2ear.net/nodenames/ /var/lib/asterisk/sounds/rpt/nodenames/
+
+By using rsync your system will only get files that are newer than the ones already there, keeping my bandwidth usage down.
+
+To add your node to the repository go to:
+<http://reflector.kb2ear.net/ubr_file_upload.php>
+
+Make sure your file is named <nodenumber>.wav,gsm,ulaw
+
+If it tells you the file is not allowed email it to me and I'll fix the upload.
+
+If you have a large number of files zip them up and then upload.
+
+Or just email me the files.
+
+once I test the file to make sure it plays in asterisk I'll add it to the repository for everyone to download.  
+
+73,
+Scott KB2EAR
